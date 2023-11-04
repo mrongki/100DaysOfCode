@@ -32,6 +32,8 @@ def play_game():
         while b_person in shown_list and a_person == b_person:
             b_person = choice(data)
             shown_list.append(b_person)
+        # for entry in shown_list: #FOR DEBUGGING shown_list
+        #     print(entry['name'])
         print(f"Compare A: {format_data(a_person)}")
         print(vs)
         print(f"Against B: {format_data(b_person)}")
@@ -48,5 +50,6 @@ def play_game():
     if play_again == 'y':
         os.system('cls')
         play_game()
+
 os.system('cls')    
 play_game()
